@@ -28,4 +28,13 @@ public class CharacterMovement : MonoBehaviour
 		float step = _rotarionSpeed * Time.deltaTime;
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, step);
 	}
+
+	public void ChangeSpeed(float modifier)
+	{
+		_movementSpeed += modifier;
+		if (_movementSpeed < 0f)
+		{
+			_movementSpeed = 0f;
+		}
+	}
 }

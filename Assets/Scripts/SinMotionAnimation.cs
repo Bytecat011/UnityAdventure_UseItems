@@ -9,13 +9,13 @@ public class SinMotionAnimation : MonoBehaviour
 
 	private void Awake()
 	{
-		_startYPosition = transform.position.y;
+		_startYPosition = transform.localPosition.y;
 	}
 
 	private void Update()
 	{
-		Vector2 position = transform.position;
+		Vector2 position = transform.localPosition;
 		position.y = _startYPosition + _offset * Mathf.Sin(position.x + _speed * Time.time);
-		transform.position = position;
+		transform.localPosition = position;
 	}
 }
