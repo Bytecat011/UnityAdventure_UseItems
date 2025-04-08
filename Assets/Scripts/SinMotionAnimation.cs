@@ -14,7 +14,7 @@ public class SinMotionAnimation : MonoBehaviour
 
 	private void Update()
 	{
-		Vector2 position = transform.localPosition;
+		Vector3 position = transform.localPosition;
 		position.y = _startYPosition + _offset * Mathf.Sin(position.x + _speed * Time.time);
 		transform.localPosition = position;
 	}
